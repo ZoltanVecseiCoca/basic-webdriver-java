@@ -21,4 +21,11 @@ public class KeysTests extends BaseTests {
         keyPage.enterPi();
     }
 
+    @Test
+    public void testBackspaceForScreenshot(){
+        var keyPage = homePage.clickKeyPresses();
+        keyPage.enterText("A" + Keys.BACK_SPACE);
+        assertEquals(keyPage.getResult(), "You entered: BACK_SPACE!");
+    }
+
 }
